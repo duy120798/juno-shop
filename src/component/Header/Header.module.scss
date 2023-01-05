@@ -215,6 +215,11 @@
   font-weight: 500;
   line-height: 20px;
   padding: 2px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .product-price {
   font-size: 1.2rem;

@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {Link} from "react-router-dom";
 import styles from "./Header.module.scss";
 import {productClass, collection} from "~/data";
@@ -7,12 +7,8 @@ import {FilterContext} from "~/layouts/DefaultLayout/DefaultLayout";
 
 const cx = classNames.bind(styles);
 function Category() {
+  const {setFilterProduct} = useContext(FilterContext);
   const [active, setActive] = useState("Hàng Mới");
-
-  const {setFilterProduct, filterProduct} = useContext(FilterContext);
-  useEffect(() => {
-    console.log(filterProduct);
-  });
 
   return (
     <ul className={cx("category-list")}>
@@ -20,6 +16,7 @@ function Category() {
         <li
           onClick={(e) => {
             setActive(e.target.innerText);
+            setFilterProduct("Hàng Mới");
           }}
           className={cx("category-item", {active: active === "Hàng Mới"})}>
           <span>Hàng Mới</span>
@@ -27,8 +24,10 @@ function Category() {
       </Link>
       <Link to="/products">
         <li
-          onClick={() => {
-            setFilterProduct("all");
+          onClick={(e) => {
+            setActive(e.target.innerText);
+
+            setFilterProduct("Sản Phẩm");
           }}
           className={cx("category-item", {active: active === "Sản Phẩm"})}>
           <span>Sản Phẩm</span>
@@ -38,8 +37,9 @@ function Category() {
                 <li
                   className={cx("subcategory-item")}
                   onClick={(e) => {
-                    e.stopPropagations();
                     setFilterProduct(list.group);
+                    e.stopPropagation();
+                    e.preventDefault();
                   }}
                   key={index}>
                   <span>{list.group}</span>
@@ -50,8 +50,9 @@ function Category() {
                           <li
                             className={cx("type-item")}
                             onClick={(e) => {
-                              e.stopPropagations();
                               setFilterProduct(type);
+                              e.stopPropagation();
+                              e.preventDefault();
                             }}
                             key={index}>
                             {type}

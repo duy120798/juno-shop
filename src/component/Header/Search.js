@@ -52,7 +52,7 @@ function Search() {
       {searchText.length > 0 && (
         <div className={cx("search-result")}>
           {searchResults.length > 0 &&
-            searchResults.map((product) => {
+            searchResults.slice(0, 5).map((product) => {
               return (
                 <Link to="/product" state={product} key={product.id} onClick={handleClickProduct}>
                   <div className={cx("product-item")}>
