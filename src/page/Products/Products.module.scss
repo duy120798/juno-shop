@@ -1,0 +1,40 @@
+.wrapper {
+  margin-top: 60px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
+  grid-gap: 12px;
+  grid-template-areas:
+    "h1 h2 h3 h4 "
+    "h5 h5 h6 h7 "
+    "h5 h5 h8 h9";
+}
+.item-1 {
+  grid-area: h1;
+}
+.item-2 {
+  grid-area: h2;
+}
+.item-3 {
+  grid-area: h3;
+}
+.item-4 {
+  grid-area: h4;
+}
+.item-5 {
+  grid-area: h5;
+}
+.item-6 {
+  grid-area: h6;
+}
+.item-7 {
+  grid-area: h7;
+}
+.item-8 {
+  grid-area: h8;
+}
+.item-9 {
+  grid-area: h9;
+}
+.product-item {
+}

@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import {BagIcon} from "../Icons";
 import styles from "./Header.module.scss";
 import Search from "./Search";
+import Category from "./Category";
 
 const cx = classNames.bind(styles);
 
@@ -15,12 +16,7 @@ function Header() {
         alt=""
         className={cx("img")}
       />
-      <ul className={cx("category-list")}>
-        <li className={cx("category-item")}>Hàng Mới</li>
-        <li className={cx("category-item")}>Bộ Sưu Tập</li>
-        <li className={cx("category-item")}>Sale Happy</li>
-        <li className={cx("category-item")}>Showroom</li>
-      </ul>
+      <Category />
       <Search />
       <div className={cx("account")}>
         <div className={cx("user-icon")}>
