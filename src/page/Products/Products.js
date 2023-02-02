@@ -24,6 +24,12 @@ function Products() {
           return product.isNew === true;
         })
       );
+    } else if (filterProduct === "sản phẩm giảm giá") {
+      setShowproduct(
+        products.filter((product) => {
+          return product.currentPrice !== undefined;
+        })
+      );
     } else {
       setShowproduct(
         products.filter((product) => {

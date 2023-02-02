@@ -1,0 +1,22 @@
+.wrapper {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  width: 100vw;
+  display: block;
+  text-align: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsT--dn0tZC70xhRxF23Q_V6dRBCFmfQv90g&usqp=CAU");
+  background-size: cover;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-top: 40px;
+  }
+
+  p {
+    padding-top: 6px;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}

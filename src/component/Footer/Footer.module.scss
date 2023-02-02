@@ -1,0 +1,133 @@
+.wrapper {
+  margin-top: 70px;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    max-width: 1280px;
+    background-color: #ccc;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+.info {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+}
+.contact {
+  margin-bottom: 15px;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  span {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+}
+.showroom {
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+.fanpage {
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.icon {
+  padding-left: 12px;
+  cursor: pointer;
+  svg {
+    margin-right: 15px;
+  }
+}
+.support-background {
+  background: #f1f1f1;
+}
+.support {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 10px;
+  display: flex;
+  cursor: pointer;
+}
+.customer-support {
+  width: 45%;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 6px;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+.support-juno {
+  flex: 1;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 6px;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+.bottom-bar {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+  justify-content: space-between;
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  img {
+    width: 100px;
+  }
+}

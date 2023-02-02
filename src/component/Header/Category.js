@@ -85,9 +85,12 @@ function Category() {
           </ul>
         </li>
       </div>
-      <Link to="/">
+      <Link to="/products">
         <li
-          onClick={(e) => setActive(e.target.innerText)}
+          onClick={(e) => {
+            setActive(e.target.innerText);
+            setFilterProduct("sản phẩm giảm giá");
+          }}
           className={cx("category-item", {active: active === "Sale Happy"})}>
           <span>Sale Happy</span>
         </li>

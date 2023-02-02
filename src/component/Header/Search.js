@@ -54,7 +54,11 @@ function Search() {
           {searchResults.length > 0 &&
             searchResults.slice(0, 5).map((product) => {
               return (
-                <Link to="/product" state={product} key={product.id} onClick={handleClickProduct}>
+                <Link
+                  to={`/product/${product.name}`}
+                  state={product}
+                  key={product.id}
+                  onClick={handleClickProduct}>
                   <div className={cx("product-item")}>
                     <img className={cx("product-img")} src={product.image[0]} alt="" />
                     <div className={cx("product-info")}>

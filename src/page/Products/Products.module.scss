@@ -1,4 +1,6 @@
 .wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
   margin-top: 60px;
   padding: 0 12px;
 }
@@ -28,12 +30,11 @@
     border: none;
     padding: 8px;
     margin-top: 15px;
+    cursor: pointer;
   }
 }
 .container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 12px;
   grid-template-areas:
     "h1 h2 h3 h4 "
@@ -66,6 +67,4 @@
 }
 .item-9 {
   grid-area: h9;
-}
-.product-item {
 }
