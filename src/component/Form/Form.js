@@ -89,6 +89,8 @@ function Form({type}) {
         } else {
           setShowErrName(true);
         }
+      } else {
+        setShowErrName(true);
       }
     }
   };
@@ -200,7 +202,7 @@ function Form({type}) {
               onClick={() => {
                 setCurrentUser(JSON.parse(localStorage.getItem("currentAccount")));
               }}
-              to={"/"}>
+              to={"/juno-shop"}>
               Trở về trang chủ
             </Link>
           </div>
