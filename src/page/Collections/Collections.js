@@ -1,6 +1,4 @@
 import classNames from "classnames/bind";
-import ProductItem from "~/component/ProductItem/ProductItem";
-import {products} from "~/data";
 import styles from "./Collections.module.scss";
 import Product from "./Product";
 
