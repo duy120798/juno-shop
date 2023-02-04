@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/juno-shop/static/css/main.8fa2574b.css",
+    "main.js": "/juno-shop/static/js/main.10a0d73e.js",
+    "static/js/787.db40509d.chunk.js": "/juno-shop/static/js/787.db40509d.chunk.js",
+    "static/media/sp6_2.webp": "/juno-shop/static/media/sp6_2.9ff47a451ccae24cab19.webp",
+    "static/media/sp1_1.webp": "/juno-shop/static/media/sp1_1.c87f151333167db939e5.webp",
+    "static/media/sp3_2.webp": "/juno-shop/static/media/sp3_2.4b92874a1ff74487de5e.webp",
+    "static/media/sp1_2.webp": "/juno-shop/static/media/sp1_2.41124e82b041bab44234.webp",
+    "static/media/sp2_2.webp": "/juno-shop/static/media/sp2_2.acea2608573bbfe8bd01.webp",
+    "static/media/sp3_1.webp": "/juno-shop/static/media/sp3_1.106791f055193ddead67.webp",
+    "static/media/sp5_2.webp": "/juno-shop/static/media/sp5_2.42e57ab6183b394e3325.webp",
+    "static/media/sp2_1.webp": "/juno-shop/static/media/sp2_1.81ce2af32368fcfc8277.webp",
+    "static/media/sp6_1.webp": "/juno-shop/static/media/sp6_1.d1362389423cc2e3e180.webp",
+    "static/media/sp4_2.webp": "/juno-shop/static/media/sp4_2.9bc336387d90e6aa25cb.webp",
+    "static/media/sp5_1.webp": "/juno-shop/static/media/sp5_1.325698a00ce7e3611a37.webp",
+    "static/media/sp4_1.webp": "/juno-shop/static/media/sp4_1.3bd3395095d60ef1996b.webp",
+    "index.html": "/juno-shop/index.html",
+    "main.8fa2574b.css.map": "/juno-shop/static/css/main.8fa2574b.css.map",
+    "main.10a0d73e.js.map": "/juno-shop/static/js/main.10a0d73e.js.map",
+    "787.db40509d.chunk.js.map": "/juno-shop/static/js/787.db40509d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fa2574b.css",
+    "static/js/main.10a0d73e.js"
+  ]
+}
