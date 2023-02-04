@@ -30,7 +30,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route
-              path="/"
+              path="/juno-shop"
               element={
                 <DefaultLayout>
                   <Collections />
