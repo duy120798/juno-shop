@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/juno-shop/static/css/main.8fa2574b.css",
-    "main.js": "/juno-shop/static/js/main.e1b1916e.js",
+    "main.css": "/juno-shop/static/css/main.b79c5818.css",
+    "main.js": "/juno-shop/static/js/main.95e7f9f3.js",
     "static/js/787.db40509d.chunk.js": "/juno-shop/static/js/787.db40509d.chunk.js",
     "static/media/sp6_2.webp": "/juno-shop/static/media/sp6_2.9ff47a451ccae24cab19.webp",
     "static/media/sp1_1.webp": "/juno-shop/static/media/sp1_1.c87f151333167db939e5.webp",
@@ -16,12 +16,12 @@
     "static/media/sp5_1.webp": "/juno-shop/static/media/sp5_1.325698a00ce7e3611a37.webp",
     "static/media/sp4_1.webp": "/juno-shop/static/media/sp4_1.3bd3395095d60ef1996b.webp",
     "index.html": "/juno-shop/index.html",
-    "main.8fa2574b.css.map": "/juno-shop/static/css/main.8fa2574b.css.map",
-    "main.e1b1916e.js.map": "/juno-shop/static/js/main.e1b1916e.js.map",
+    "main.b79c5818.css.map": "/juno-shop/static/css/main.b79c5818.css.map",
+    "main.95e7f9f3.js.map": "/juno-shop/static/js/main.95e7f9f3.js.map",
     "787.db40509d.chunk.js.map": "/juno-shop/static/js/787.db40509d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fa2574b.css",
-    "static/js/main.e1b1916e.js"
+    "static/css/main.b79c5818.css",
+    "static/js/main.95e7f9f3.js"
   ]
 }
