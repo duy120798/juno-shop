@@ -6,11 +6,12 @@ import Product from "./page/Product";
 import Products from "./page/Products";
 import Login from "./page/Login";
 import Register from "./page/Register";
-
 import React, {createContext} from "react";
+
 import {useState} from "react";
 import {useEffect} from "react";
 import Cart from "./page/Cart";
+import ScrollToTop from "./component/ScrollToTop/ScrollToTop";
 let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
 export const LoginContext = createContext();
 
@@ -24,9 +25,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem("currentAccount", JSON.stringify(currentUser));
   }, [currentUser]);
+
   return (
     <LoginContext.Provider value={data}>
-      <Router onUpdate={() => window.scrollTo(0, 0)}>
+      <Router>
+        <ScrollToTop />
         <div className="App">
           <Routes>
             <Route

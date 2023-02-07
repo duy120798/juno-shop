@@ -8,7 +8,7 @@ import {FilterContext} from "~/layouts/DefaultLayout/DefaultLayout";
 const cx = classNames.bind(styles);
 function Category() {
   const {setFilterProduct} = useContext(FilterContext);
-  const [active, setActive] = useState("Hàng Mới");
+  const [active, setActive] = useState("Bộ Sưu Tập");
 
   return (
     <ul className={cx("category-list")}>
@@ -40,6 +40,7 @@ function Category() {
                     setFilterProduct(list.group);
                     e.stopPropagation();
                     e.preventDefault();
+                    setActive("Sản Phẩm");
                   }}
                   key={index}>
                   <span>{list.group}</span>
@@ -53,6 +54,7 @@ function Category() {
                               setFilterProduct(type);
                               e.stopPropagation();
                               e.preventDefault();
+                              setActive("Sản Phẩm");
                             }}
                             key={index}>
                             {type}
@@ -68,22 +70,22 @@ function Category() {
         </li>
       </Link>
       <div>
-        <li
-          onClick={(e) => setActive(e.target.innerText)}
-          className={cx("category-item", {active: active === "Bộ Sưu Tập"})}>
-          <span>Bộ Sưu Tập</span>
-          <ul className={cx("subcategory")}>
-            {collection.map((collection, index) => {
-              return (
-                <Link key={index} to="/">
+        <Link to="/juno-shop">
+          <li
+            onClick={(e) => setActive(e.target.innerText)}
+            className={cx("category-item", {active: active === "Bộ Sưu Tập"})}>
+            <span>Bộ Sưu Tập</span>
+            <ul className={cx("subcategory")}>
+              {collection.map((collection, index) => {
+                return (
                   <li className={cx("subcategory-item")} key={index}>
                     <span>{collection}</span>
                   </li>
-                </Link>
-              );
-            })}
-          </ul>
-        </li>
+                );
+              })}
+            </ul>
+          </li>
+        </Link>
       </div>
       <Link to="/products">
         <li

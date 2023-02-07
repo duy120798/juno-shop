@@ -24,6 +24,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
+  margin-top: 15px;
 
   img {
     width: 100%;
@@ -59,4 +60,12 @@
 .product-box {
   display: flex;
   justify-content: center;
+}
+
+.describe-1 {
+  text-align: center;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

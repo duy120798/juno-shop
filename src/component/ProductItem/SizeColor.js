@@ -28,11 +28,20 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
   const handleOrder = () => {
     const data = {...currentUser};
     const isDuplicate = data.cart.some((product) => {
-      return product.name === orderProduct.name;
+      return (
+        product.name === orderProduct.name &&
+        product.size === orderProduct.size &&
+        product.color === orderProduct.color
+      );
     });
 
     if (isDuplicate) {
-      const findProduct = data.cart.find((product) => product.name === orderProduct.name);
+      const findProduct = data.cart.find(
+        (product) =>
+          product.name === orderProduct.name &&
+          product.size === orderProduct.size &&
+          product.color === orderProduct.color
+      );
       const index = data.cart.indexOf(findProduct);
       ++data.cart[index].quantity;
     } else {
@@ -51,19 +60,19 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
         <div
           onClick={() => {
             setColor("pink");
-            setChooseColor("pink");
+            setChooseColor && setChooseColor("pink");
           }}
           className={cx("color-pink", {active: color === "pink"})}></div>
         <div
           onClick={() => {
             setColor("green");
-            setChooseColor("green");
+            setChooseColor && setChooseColor("green");
           }}
           className={cx("color-green", {active: color === "green"})}></div>
         <div
           onClick={() => {
             setColor("white");
-            setChooseColor("white");
+            setChooseColor && setChooseColor("white");
           }}
           className={cx("color-white", {active: color === "white"})}></div>
       </div>
@@ -71,7 +80,7 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
         <div
           onClick={() => {
             setSize("s");
-            setChooseSize("s");
+            setChooseSize && setChooseSize("s");
           }}
           className={cx("size-s", {active: size === "s"})}>
           S
@@ -79,7 +88,7 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
         <div
           onClick={() => {
             setSize("m");
-            setChooseSize("m");
+            setChooseSize && setChooseSize("m");
           }}
           className={cx("size-m", {active: size === "m"})}>
           M
@@ -87,7 +96,7 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
         <div
           onClick={() => {
             setSize("l");
-            setChooseSize("l");
+            setChooseSize && setChooseSize("l");
           }}
           className={cx("size-l", {active: size === "l"})}>
           L
@@ -95,7 +104,7 @@ function SizeColor({product, noButton, setChooseColor, setChooseSize}) {
         <div
           onClick={() => {
             setSize("xl");
-            setChooseSize("xl");
+            setChooseSize && setChooseSize("xl");
           }}
           className={cx("size-xl", {active: size === "xl"})}>
           XL

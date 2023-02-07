@@ -87,6 +87,62 @@ function Collections() {
             }}
           />
         </div>
+        <div className={cx("img-box")}>
+          <img
+            src="https://file.hstatic.net/1000003969/file/7_1feb63411f3e4b03b8a73be9c775540d.jpg"
+            alt=""
+          />
+          <div className={cx("describe-1")}>
+            <p>
+              Sở hữu những mẫu túi với thiết kế độc đáo, chuẩn xu hướng thời trang quốc tế kết hợp
+              cùng ý tưởng sáng tạo từ kem..
+            </p>
+            <Product
+              data={{
+                image:
+                  "https://file.hstatic.net/1000003969/file/5_4e5bd5deae014b34a14248f063e4c130.jpg",
+                name: "Summer Cool Dessert",
+                cost: "795,000₫",
+              }}
+            />
+            <Product
+              data={{
+                image:
+                  "https://file.hstatic.net/1000003969/file/6_0bc5de84b68b49e48783becb0a441e73.jpg",
+                name: "Summer Cool Dessert",
+                cost: "795,000₫",
+              }}
+            />
+          </div>
+        </div>
+        <div className={cx("img-box")}>
+          <div className={cx("describe-1")}>
+            <p>
+              Cùng với túi kem, những mẫu giày kem cũng sẽ theo chân nàng tận hưởng hương vị mùa hè
+              muôn nơi.
+            </p>
+            <Product
+              data={{
+                image:
+                  "https://file.hstatic.net/1000003969/file/7_5a79c9d62e154b0d8014446289a090d2.jpg",
+                name: "Lady-like-ice",
+                cost: "555,000₫",
+              }}
+            />
+            <Product
+              data={{
+                image:
+                  "https://file.hstatic.net/1000003969/file/8_85a84219d6a2441b9f1e1208601ea315.jpg",
+                name: "Lady-like-ice",
+                cost: "555,000₫",
+              }}
+            />
+          </div>
+          <img
+            src="https://file.hstatic.net/1000003969/file/8_8ea77740fe314b86a3ba53674bb9bc26.jpg"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );

@@ -27,7 +27,6 @@ function Cart() {
       );
     }
   };
-
   const handlePay = () => {
     if (checkList.length === 0) {
       return;
@@ -44,6 +43,27 @@ function Cart() {
       setCurrentUser(a);
       setCheckList([]);
       setShowModal(true);
+    }
+  };
+
+  const handleAdd = (e) => {
+    const productIndex = e.target.dataset.index;
+    const data = {...currentUser};
+
+    ++cart[productIndex].quantity;
+    data.cart = cart;
+    setCurrentUser(data);
+  };
+  const handleDecrease = (e) => {
+    const productIndex = e.target.dataset.index;
+    const data = {...currentUser};
+    if (cart[productIndex].quantity > 1) {
+      --cart[productIndex].quantity;
+      data.cart = cart;
+      setCurrentUser(data);
+    } else {
+      cart.splice(productIndex, 1);
+      setCurrentUser(data);
     }
   };
 
@@ -77,7 +97,21 @@ function Cart() {
                   <p className={cx("product-color")}>{product.color}</p>
                   <p className={cx("product-size")}>{product.size}</p>
                   <p className={cx("product-cost")}>{product.cost}</p>
-                  <p className={cx("product-quantity")}>{product.quantity}</p>
+                  <p className={cx("product-quantity")}>
+                    <span
+                      data-index={index}
+                      className={cx("product-quantity-change")}
+                      onClick={handleAdd}>
+                      +
+                    </span>
+                    {product.quantity}
+                    <span
+                      data-index={index}
+                      className={cx("product-quantity-change")}
+                      onClick={handleDecrease}>
+                      -
+                    </span>
+                  </p>
                 </div>
               );
             })}

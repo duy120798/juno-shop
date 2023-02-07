@@ -43,11 +43,20 @@ function Product() {
   const handleOrder = () => {
     const data = {...currentUser};
     const isDuplicate = data.cart.some((product) => {
-      return product.name === orderProduct.name;
+      return (
+        product.name === orderProduct.name &&
+        product.size === orderProduct.size &&
+        product.color === orderProduct.color
+      );
     });
 
     if (isDuplicate) {
-      const findProduct = data.cart.find((product) => product.name === orderProduct.name);
+      const findProduct = data.cart.find(
+        (product) =>
+          product.name === orderProduct.name &&
+          product.size === orderProduct.size &&
+          product.color === orderProduct.color
+      );
       const index = data.cart.indexOf(findProduct);
       ++data.cart[index].quantity;
     } else {
